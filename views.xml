@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record model="ir.actions.act_window" id="club_list_action">
+        <field name="name">club</field>
+        <field name="res_model">elclub.club</field>
+        <field name="view_type">ir.actions.act_window"</field>
+        <field name="view_mode">tree,form</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de poblaciones">
+                <field name="name" />
+                <field name="club_id"/>
+            </tree>
+        </field>
+    </record>
+
+
+     <record model="ir.actions.act_window" id="equipo_list_action">
+        <field name="name">equipo</field>
+        <field name="res_model">elclub.equipo</field>
+        <field name="view_type">ir.actions.act_window"</field>
+        <field name="view_mode">tree,form</field>
+        <field name="arch" type="xml">
+            <tree string="Listado de poblaciones">
+                <field name="name" />
+                <field name="equipo_id"/>
+            </tree>
+        </field>
+    </record>
+    
+
+   
+    
+    
+    
+    
+   
+    
+   
+    
+    
+
+    <menuitem name="Los Clubs" id="losclubs_menu_root"/>
+    
+    <menuitem name="los clubs" id="club_menu_provincias" parent="losclubs_menu_root"/>
+    <menuitem name="equipos" id="equipo_menu_poblaciones" parent="losclubs_menu_root"/>
+   
+    
+    
+    <menuitem name="listado de clubs" id="club_list_provincias" parent="club_list_action"
+              action="club_list_action"/>
+    <menuitem name="listado de equipos" id="equipo_list_poblaciones" parent="equipo_list_action"
+              action="equip_list_action"/>
+   
+   
+   
+    
+        
+       
+        
+       </data>
+</openerp>
